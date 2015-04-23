@@ -1,6 +1,8 @@
 <tal:slider define="panes view/panes;
                     slider_enabled python:len(panes) > 1;
                     portal context/@@plone_portal_state/portal;">
+<div class="row">
+<div class="col-md-12">
   <div id="slider-wrapper"
        tal:attributes="class python:slider_enabled and 'enabled' or None"
        tal:condition="panes">
@@ -25,7 +27,8 @@
     </div>
 
   </div>
-
+</div>
+</div>
   <div class="visualClear"><!-- --></div>
 
 </tal:slider>
